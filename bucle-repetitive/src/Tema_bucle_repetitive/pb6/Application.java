@@ -10,20 +10,23 @@ public class Application {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduceti nr. dorit !");
         int nr = scanner.nextInt();
-        int nrPar = 0;
+        int nrPar = -1;
+
 
         while (nr != 0) {
             int cifra = nr % 10;
             if (cifra % 2 == 0 && cifra > nrPar) {
                 nrPar = cifra;
             }
-            if(cifra%2!=0){
-                System.out.println("10");
-            }
-
             nr = nr / 10;
         }
-        System.out.println("Cifra para cea mai mare este: "+nrPar);
+
+        if(nrPar==-1){
+            System.out.println(10);
+        }else{
+            System.out.println(nrPar);
+        }
+
     }
 }
 // Se afiseaza 10 la fiecare nr impar din numar , afiseaza 0 daca nu exista numere pari.

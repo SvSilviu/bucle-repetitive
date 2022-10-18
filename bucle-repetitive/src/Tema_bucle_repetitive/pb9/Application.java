@@ -8,19 +8,22 @@ public class Application {
 
         int nr = 49268;
         int cifraPara = 0;
-        int cifraImpara = 1;
+        int cifraImpara = 11;
 
-        while(nr!=0){
-            int cifra=nr%10;
-            if(cifra%2==0&&cifra>cifraPara){
-                cifraPara=cifra*cifraImpara;
+        while (nr != 0) {
+            int cifra = nr % 10;
+            if (cifra % 2 == 0 && cifra > cifraPara) {
+                cifraPara = cifra;
             }
-            if(cifra%2!=0&&cifra<cifraImpara){
-                cifraImpara=cifra*cifraPara;
+            if (cifra % 2 != 0 && cifra < cifraImpara) {
+                cifraImpara = cifra;
             }
-            nr=nr/10;
+            nr = nr / 10;
         }
-        System.out.println(cifraPara*cifraImpara);
+
+        System.out.println(cifraPara);
+        System.out.println(cifraImpara);
+        System.out.println(cifraPara * cifraImpara);
 
         //nu este rezultatul care trebuie.
 

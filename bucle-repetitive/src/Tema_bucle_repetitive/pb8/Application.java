@@ -5,20 +5,26 @@ public class Application {
 
         //TODO: Se dau numerele naturale n și k, unde k este o cifră. Să se verifice dacă toate cifrele lui n sunt mai mici sau egale decât k.
 
-        int n = 12345678;
-        int k = 9;
+        int nr = 123455;
+        int k = 7;
 
-        while (n != 0) {
-            int x = n % 10;
-            if (x <= k) {
-                System.out.println("Toate cifrele lui n sunt mai mici sau egale cu cifra k !");
-            } else {
-                System.out.println("K este mai mare decat toate cifrele lui n !");
+        boolean semn = true;
+
+        while (nr != 0) {
+            int cifra = nr % 10;
+            if (cifra > k) {
+
+                semn = false;
             }
-            n = n / 10;
+            nr = nr / 10;
         }
 
-        //Se afiseaza mesajul pentru fiecare cifra !!!
+        if (semn == true) {
+            System.out.println("Este adevarat");
+        } else {
+            System.out.println("Nu este adevarat");
+        }
+
 
 
     }

@@ -12,12 +12,12 @@ public class Application {
         int n = scanner.nextInt();
         int nou = 0;
 
-        while(n!=0){
-            int cifra = n%10;
-           nou=(nou*10)+cifra;
+        while (n != 0) {
+            int cifra = n % 10;
+            nou = (nou * 10) + cifra;
 
-            n=n/10;
+            n = n / 10;
         }
-        System.out.println("Numarul inversat este: "+nou);
+        System.out.println("Numarul inversat este: " + nou);
     }
 }

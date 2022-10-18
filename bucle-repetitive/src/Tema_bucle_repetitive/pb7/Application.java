@@ -10,7 +10,7 @@ public class Application {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Introduceti nr. dorit !");
         int nr = scanner.nextInt();
-        int nrImpar = 1;
+        int nrImpar = -1;
 
         while (nr != 0) {
             int cifra = nr % 10;
@@ -18,9 +18,15 @@ public class Application {
                 nrImpar = cifra;
             }
             nr = nr / 10;
-
         }
-        System.out.println("Cea mai mare cifra impara este: " + nrImpar);
+
+        if(nrImpar==-1){
+            System.out.println("nu avem cifre impare");
+        }else{
+            System.out.println("Cea mai mare cifra impara este: " + nrImpar);
+        }
+
+
     }
 }
 // daca nu am nicio cifra impara in numar imi afiseaza 1 chiar daca 1 nu exista in numarul initial.

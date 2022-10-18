@@ -12,14 +12,14 @@ public class Application {
         System.out.println("Introduceti nr. dorit !");
 
         int nr = scanner.nextInt();
-        int contor =0;
+        int contor = 0;
 
 
-        while(nr!=0){
-            int cifra = nr%10;
+        while (nr != 0) {
+            int cifra = nr % 10;
             contor++;
-            nr=nr/10;
+            nr = nr / 10;
         }
-                System.out.println("Suma cifrelor numarului este : "+contor);
+        System.out.println("Suma cifrelor numarului este : " + contor);
     }
 }
